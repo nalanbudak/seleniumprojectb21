@@ -19,6 +19,12 @@ public class SeleniumTest {
         //3- Use the instance to get the URL we want
         driver.get("https://www.google.com");
 
+        System.out.println("Current title of the page: " + driver.getTitle());
+
+        String currentUrl = driver.getCurrentUrl();
+
+        System.out.println("currentUrl = " + currentUrl);
+
         //we are using navigate.back method from SELENIUM LIBRARY
         Thread.sleep(3000);
 
@@ -35,7 +41,11 @@ public class SeleniumTest {
         //this is similar to get method. it gets the given URL.
         driver.navigate().to("https://www.tesla.com");
 
+        System.out.println("Current title of the page: " + driver.getTitle());
 
+        currentUrl = driver.getCurrentUrl();
+
+        System.out.println("currentUrl = " + currentUrl);
 
 
 
