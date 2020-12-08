@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //1- Setup web driver manager
         WebDriverManager.chromedriver().setup();
@@ -19,8 +19,21 @@ public class SeleniumTest {
         //3- Use the instance to get the URL we want
         driver.get("https://www.google.com");
 
+        //we are using navigate.back method from SELENIUM LIBRARY
+        Thread.sleep(3000);
 
         driver.navigate().back();
+
+        Thread.sleep(3000);
+
+        driver.navigate().forward();
+
+        Thread.sleep(3000);
+
+        driver.navigate().to("https://www.tesla.com");
+
+
+
 
 
 
