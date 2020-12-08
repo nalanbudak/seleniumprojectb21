@@ -21,6 +21,7 @@ public class SeleniumTest {
 
         System.out.println("Current title of the page: " + driver.getTitle());
 
+        //getting the current URL and storing it into a String
         String currentUrl = driver.getCurrentUrl();
 
         System.out.println("currentUrl = " + currentUrl);
@@ -43,6 +44,7 @@ public class SeleniumTest {
 
         System.out.println("Current title of the page: " + driver.getTitle());
 
+        //we are refreshing(re-assigning) the value of "currentUrl" String by calling the method again.
         currentUrl = driver.getCurrentUrl();
 
         System.out.println("currentUrl = " + currentUrl);
