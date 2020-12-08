@@ -12,9 +12,15 @@ public class SeleniumTest {
         WebDriverManager.chromedriver().setup();
         //System.setProperty("chrome", "path of driver");
 
+//        WebDriverManager.firefoxdriver().setup();
+//        WebDriver driver = new FirefoxDriver();
+
         //2- Create instance of web driver
         // this is the line where the Selenium WebDriver opens the browser
         WebDriver driver = new ChromeDriver();
+
+        //this line maximizes the browser.
+        driver.manage().window().maximize();
 
         //3- Use the instance to get the URL we want
         driver.get("https://www.google.com");
@@ -48,6 +54,9 @@ public class SeleniumTest {
         currentUrl = driver.getCurrentUrl();
 
         System.out.println("currentUrl = " + currentUrl);
+
+        //closing the browser
+        driver.close();
 
 
 
