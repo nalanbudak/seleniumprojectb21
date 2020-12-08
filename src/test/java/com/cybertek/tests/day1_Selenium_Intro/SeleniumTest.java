@@ -22,14 +22,17 @@ public class SeleniumTest {
         //we are using navigate.back method from SELENIUM LIBRARY
         Thread.sleep(3000);
 
+        //goes to back
         driver.navigate().back();
 
         Thread.sleep(3000);
 
+        //goes to forward
         driver.navigate().forward();
 
         Thread.sleep(3000);
 
+        //this is similar to get method. it gets the given URL.
         driver.navigate().to("https://www.tesla.com");
 
 
