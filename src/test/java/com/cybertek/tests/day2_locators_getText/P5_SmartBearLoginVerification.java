@@ -23,9 +23,24 @@ public class P5_SmartBearLoginVerification {
         //http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
 
-
         //3- Verify title equals:
         //Expected: Web Orders Login
+
+        String expectedTitle = "Web Orders Login";
+
+        //when you use a method, you can press alt + enter to introduce local variable
+        //it will automatically create variable and guess name for it
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Landing page title verification PASSED!");
+        }else {
+            System.err.println("Landing page title verification FAILED!!!");
+            System.out.println("expectedTitle = " + expectedTitle);
+            System.out.println("actualTitle = " + actualTitle);
+        }
+
+
         //4- Enter username: Tester
         //5- Enter password: test
         //6- Click “Sign In” button
