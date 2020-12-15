@@ -35,8 +35,14 @@ public class P4_GoogleSearchVerification {
         String expectedInTitle = "apple";
         String actualTitle = driver.getTitle();
 
+        if (actualTitle.startsWith(expectedInTitle)){
+            System.out.println("Title verification PASSED!");
+        }else{
+            System.err.println("Title verification FAILED!!!");
+            System.out.println("expectedInTitle = " + expectedInTitle);
+            System.out.println("actualTitle = " + actualTitle);
+        }
 
-
-
+        driver.close();
     }
 }
