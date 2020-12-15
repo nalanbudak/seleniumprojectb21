@@ -53,5 +53,6 @@ public class P3_GmailTitleVerification {
         }
 
         driver.close();
+
     }
 }
