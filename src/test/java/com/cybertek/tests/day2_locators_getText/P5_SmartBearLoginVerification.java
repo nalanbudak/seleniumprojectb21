@@ -46,11 +46,24 @@ public class P5_SmartBearLoginVerification {
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("tester");
 
         //5- Enter password: test
-
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
 
         //6- Click “Sign In” button
+        driver.findElement(By.className("button")).click();
+
+
         //7- Verify title equals:
         //Expected: Web Orders
+        String expectedLoginTitle = "Web Orders";
+        String actualLoginTitle = driver.getTitle();
+
+        if (actualLoginTitle.equals(expectedLoginTitle)){
+            System.out.println("Login title verification PASSED!");
+        }else{
+            System.out.println("Login title verification FAILED!!!");
+            System.out.println("expectedLoginTitle = " + expectedLoginTitle);
+            System.out.println("actualLoginTitle = " + actualLoginTitle);
+        }
 
 
     }
