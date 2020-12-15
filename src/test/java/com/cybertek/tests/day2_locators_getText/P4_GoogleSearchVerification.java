@@ -1,6 +1,7 @@
 package com.cybertek.tests.day2_locators_getText;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,6 +13,7 @@ public class P4_GoogleSearchVerification {
         //1- Open a chrome browser
         //setup driver
         WebDriverManager.chromedriver().setup();
+
         //open browser
         WebDriver driver = new ChromeDriver();
 
@@ -22,6 +24,8 @@ public class P4_GoogleSearchVerification {
         driver.get("https://www.google.com");
 
         //3- Write “apple” in search box
+        driver.findElement(By.name("q")).sendKeys("apple");
+
         //4- Click google search button
         //5- Verify title:
         //Expected: Title should start with “apple” word
