@@ -44,5 +44,7 @@ public class P2_CybertekTitleVerification {
         }
 
 
+        driver.close();
+
     }
 }
