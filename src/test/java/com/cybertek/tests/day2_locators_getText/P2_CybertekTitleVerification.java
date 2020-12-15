@@ -16,7 +16,7 @@ public class P2_CybertekTitleVerification {
         WebDriver driver = new ChromeDriver();
 
         //2. Go to https://practice.cybertekschool.com
-        driver.get("https://practice.cybertekschool.com");
+        driver.get("http://practice.cybertekschool.com");
 
         //3. Verify URL contains
         //Expected: cybertekschool
