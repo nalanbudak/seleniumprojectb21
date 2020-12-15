@@ -19,9 +19,14 @@ public class P1_FacebookTitleVerification {
 
         //2. Go to https://www.facebook.com
         driver.get("https://www.facebook.com");
-        
+
         //3. Verify title:
         //Expected: Facebook - Log In or Sign Up
+        //Actual: we need to get from browser using selenium
+
+        String expectedResult = "Facebook - Log In or Sign Up";
+        
+
 
 
     }
