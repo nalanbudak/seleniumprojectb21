@@ -20,6 +20,16 @@ public class P2_CybertekTitleVerification {
 
         //3. Verify URL contains
         //Expected: cybertekschool
+        String expectedInUrl = "cybertekschool";
+        String actualUrl =  driver.getCurrentUrl();
+
+        if (actualUrl.contains(expectedInUrl)){
+            System.out.println("URL verification PASSED!");
+        }else{
+            System.out.println("URL verification FAILED!!!");
+        }
+
+
         //4. Verify title:
         //Expected: Practice
 
