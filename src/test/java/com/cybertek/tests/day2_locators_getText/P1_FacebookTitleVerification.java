@@ -36,6 +36,8 @@ public class P1_FacebookTitleVerification {
             System.out.println("Title verification FAILED!!!");
         }
 
+        driver.close();
+
 
     }
 
