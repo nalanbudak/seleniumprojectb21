@@ -46,6 +46,12 @@ public class P3_GmailTitleVerification {
         String expectedGoogleTitle = "Google";
         String actualGoogleTitle = driver.getTitle();
 
+        if (actualGoogleTitle.equals(expectedGoogleTitle)){
+            System.out.println("Google title verification PASSED!");
+        }else {
+            System.err.println("Google title verification FAILED!!!");
+        }
 
+        driver.close();
     }
 }
