@@ -28,11 +28,24 @@ public class P3_GmailTitleVerification {
 
         //4- Verify title contains:
         //Expected: Gmail
+        String expectedInTitle = "Gmail";
+        String actualTitle = driver.getTitle();
 
-        
+        if (actualTitle.contains(expectedInTitle)){
+            System.out.println("Title verification PASSED!");
+        }else{
+            System.err.println("Title verification FAILED!!!");
+        }
 
         //5- Go back to Google by using the .back();
+        driver.navigate().back();
+
         //6- Verify title equals:
         //Expected: Google
+
+        String expectedGoogleTitle = "Google";
+        String actualGoogleTitle = driver.getTitle();
+
+
     }
 }
