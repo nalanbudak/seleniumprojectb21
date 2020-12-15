@@ -1,6 +1,7 @@
 package com.cybertek.tests.day2_locators_getText;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,9 +17,20 @@ public class P3_GmailTitleVerification {
         //2- Go to: https://google.com
         driver.get("https://www.google.com");
 
+        //this line will maximize(full screen) our currently opened browser
+        driver.manage().window().maximize();
+
         //3- Click to Gmail from top right.
+        //To be able to click, we need to locate the web element from the page
+
+        driver.findElement(By.linkText("Gmail")).click();
+
+
         //4- Verify title contains:
         //Expected: Gmail
+
+        
+
         //5- Go back to Google by using the .back();
         //6- Verify title equals:
         //Expected: Google
