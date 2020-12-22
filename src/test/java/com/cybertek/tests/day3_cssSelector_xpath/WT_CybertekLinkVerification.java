@@ -1,11 +1,21 @@
 package com.cybertek.tests.day3_cssSelector_xpath;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class WT_CybertekLinkVerification {
 
     public static void main(String[] args) {
 
         //TC #3: PracticeCybertek/ForgotPassword URL verification
         //1. Open Chrome browser
+        //setup
+        WebDriverManager.chromedriver().setup();
+        
+        //create instance of browser
+        WebDriver driver = new ChromeDriver();
+
         //2. Go to http://practice.cybertekschool.com/forgot_password
         //3. Enter any email into input box
         //4. Click on Retrieve password
