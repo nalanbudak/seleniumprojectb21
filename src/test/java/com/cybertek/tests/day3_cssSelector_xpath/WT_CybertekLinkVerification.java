@@ -54,8 +54,18 @@ public class WT_CybertekLinkVerification {
 
         //Second verification : is to check the content of the confirmation_message web element
         //Expected: “Your e-mail’s been sent!”
-        String expectedMessage = "Your e-mail’s been sent!";
-        //String actualMessage
+        String expectedMessage = "Your e-mail's been sent!";
+        //String actualMessage = driver.findElement(By.name("confirmation_message")).getText();
+        String actualMessage = confirmation_message.getText();
+
+        if (actualMessage.equals(expectedMessage)){
+            System.out.println("Message verification PASSED!");
+        }else{
+            System.out.println("Message verification FAILED!!!");
+            System.out.println("expectedMessage = " + expectedMessage);
+            System.out.println("actualMessage = " + actualMessage);
+        }
+
 
     }
 
