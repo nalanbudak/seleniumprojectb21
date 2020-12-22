@@ -41,13 +41,21 @@ public class WT_CybertekLinkVerification {
         }
 
         //6. Verify textbox displayed the content as expected.
-        //Expected: “Your e-mail’s been sent!”
 
         WebElement confirmation_message = driver.findElement(By.name("confirmation_message"));
 
-        //first verification is to check if it is displayed on the page or not.
+        //First verification is to check if it is displayed on the page or not.
 
+        if (confirmation_message.isDisplayed()){
+            System.out.println("Confirmation message is displayed. PASS!!!");
+        }else{
+            System.out.println("Confirmation message is NOT displayed. FAIL!!!");
+        }
 
+        //Second verification : is to check the content of the confirmation_message web element
+        //Expected: “Your e-mail’s been sent!”
+        String expectedMessage = "Your e-mail’s been sent!";
+        //String actualMessage
 
     }
 
