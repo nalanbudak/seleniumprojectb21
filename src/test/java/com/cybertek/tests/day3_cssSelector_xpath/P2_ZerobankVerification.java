@@ -25,7 +25,20 @@ public class P2_ZerobankVerification {
         //3. Verify link text from top left:
         WebElement zeroBankLink = driver.findElement(By.className("brand"));
 
+
         //Expected: “Zero Bank”
+        String expectedLinkText = "Zero Bank";
+        String actualLinkText = zeroBankLink.getText();
+
+        if (actualLinkText.equals(expectedLinkText)){
+            System.out.println("Link TEXT verification PASSED!");
+        }else{
+            System.out.println("Link TEXT verification FAILED!!!");
+            System.out.println("actualLinkText = " + actualLinkText);
+            System.out.println("expectedLinkText = " + expectedLinkText);
+        }
+
+
         //4. Verify link href attribute value contains:
         //Expected: “index.html”
 
