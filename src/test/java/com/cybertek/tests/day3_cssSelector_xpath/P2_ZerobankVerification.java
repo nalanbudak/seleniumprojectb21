@@ -16,8 +16,9 @@ public class P2_ZerobankVerification {
         //open browser and create driver instance
         WebDriver driver = new ChromeDriver();
 
-
         //2. Go to http://zero.webappsecurity.com/login.html
+        driver.get("http://zero.webappsecurity.com/login.html");
+
         //3. Verify link text from top left:
         //Expected: “Zero Bank”
         //4. Verify link href attribute value contains:
