@@ -24,6 +24,8 @@ public class WT_CybertekLinkVerification {
         driver.findElement(By.name("email")).sendKeys("anything@anydomain.com");
 
         //4. Click on Retrieve password
+        driver.findElement(By.id("form_submit")).click();
+
         //5. Verify URL contains:
         //Expected: “email_sent”
         //6. Verify textbox displayed the content as expected.
