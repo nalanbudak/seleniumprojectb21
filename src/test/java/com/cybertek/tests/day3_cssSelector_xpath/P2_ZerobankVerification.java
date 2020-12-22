@@ -1,10 +1,9 @@
 package com.cybertek.tests.day3_cssSelector_xpath;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class P2_ZerobankVerification {
 
@@ -12,11 +11,8 @@ public class P2_ZerobankVerification {
 
         //TC #2: Zero Bank link text verification
         //1. Open Chrome browser
-        ///setup
-        WebDriverManager.chromedriver().setup();
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
-        //open browser and create driver instance
-        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
         //2. Go to http://zero.webappsecurity.com/login.html
