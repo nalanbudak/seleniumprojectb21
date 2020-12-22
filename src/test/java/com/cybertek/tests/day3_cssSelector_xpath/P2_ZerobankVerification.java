@@ -43,8 +43,16 @@ public class P2_ZerobankVerification {
         String expectedInHref = "index.html";
         String actualHref = zeroBankLink.getAttribute("href");
 
-        System.out.println("expectedInHref = " + expectedInHref);
-        System.out.println("actualHref = " + actualHref);
 
+        if (actualHref.contains(expectedInHref)){
+            System.out.println("HREF value verification PASSED!");
+        }else{
+            System.out.println("HREF value verification FAILED!!!");
+            System.out.println("expectedInHref = " + expectedInHref);
+            System.out.println("actualHref = " + actualHref);
+        }
+
+
+        driver.close();
     }
 }
