@@ -3,6 +3,7 @@ package com.cybertek.tests.day3_cssSelector_xpath;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WT_CybertekLinkVerification {
@@ -41,6 +42,10 @@ public class WT_CybertekLinkVerification {
 
         //6. Verify textbox displayed the content as expected.
         //Expected: “Your e-mail’s been sent!”
+
+        WebElement confirmation_message = driver.findElement(By.name("confirmation_message"));
+
+        //first verification is to check if it is displayed on the page or not.
 
 
 
