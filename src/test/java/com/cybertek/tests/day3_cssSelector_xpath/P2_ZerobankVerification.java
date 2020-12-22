@@ -38,9 +38,13 @@ public class P2_ZerobankVerification {
             System.out.println("expectedLinkText = " + expectedLinkText);
         }
 
-
         //4. Verify link href attribute value contains:
         //Expected: “index.html”
+        String expectedInHref = "index.html";
+        String actualHref = zeroBankLink.getAttribute("href");
+
+        System.out.println("expectedInHref = " + expectedInHref);
+        System.out.println("actualHref = " + actualHref);
 
     }
 }
