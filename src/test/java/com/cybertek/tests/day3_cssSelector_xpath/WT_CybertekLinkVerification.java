@@ -17,6 +17,7 @@ public class WT_CybertekLinkVerification {
 
         //create instance of browser
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
         //2. Go to http://practice.cybertekschool.com/forgot_password
         driver.get("http://practice.cybertekschool.com/forgot_password");
@@ -66,7 +67,7 @@ public class WT_CybertekLinkVerification {
             System.out.println("actualMessage = " + actualMessage);
         }
 
-
+        driver.close();
     }
 
 }
