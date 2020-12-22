@@ -20,6 +20,9 @@ public class P3_Amazon_cssSelectorTask {
         //3. Enter search term (use cssSelector to locate search box)
 
         WebElement amazonSearchBar = driver.findElement(By.cssSelector("input[id='twotabsearchtextbox']"));
+
+        //Second syntax for css Selector: tagName#attributeValue
+        //WebElement amazonSearchBar = driver.findElement(By.cssSelector("input#twotabsearchtextbox"));
         // tagname[attribute='value']
 
         amazonSearchBar.sendKeys("apple" + Keys.ENTER);
