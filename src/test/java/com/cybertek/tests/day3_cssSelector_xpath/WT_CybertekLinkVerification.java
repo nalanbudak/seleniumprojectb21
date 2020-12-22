@@ -68,6 +68,7 @@ public class WT_CybertekLinkVerification {
         }
 
         driver.close();
+        //BREAK UNTIL 11.17AM CST 12.17PM EST
     }
 
 }
