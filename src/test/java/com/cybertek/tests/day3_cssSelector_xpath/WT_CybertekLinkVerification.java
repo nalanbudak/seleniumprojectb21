@@ -28,6 +28,17 @@ public class WT_CybertekLinkVerification {
 
         //5. Verify URL contains:
         //Expected: “email_sent”
+        String expectedInUrl = "email_sent";
+        String actualUrl = driver.getCurrentUrl();
+
+        if (actualUrl.contains(expectedInUrl)){
+            System.out.println("URL verification PASSED!");
+        }else{
+            System.out.println("URL verification FAILED!!!");
+            System.out.println("actualUrl = " + actualUrl);
+            System.out.println("expectedInUrl = " + expectedInUrl);
+        }
+
         //6. Verify textbox displayed the content as expected.
         //Expected: “Your e-mail’s been sent!”
 
