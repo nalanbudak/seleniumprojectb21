@@ -25,7 +25,22 @@ public class P2_MerriamWebster_Practice {
         //3. Print out the texts of all links
         List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
 
+        int linksWithText = 0;
+        int linksWithoutText = 0;
 
+        for (WebElement eachLink : allLinks){
+
+            String textOfEachLink = eachLink.getText();
+
+            System.out.println(textOfEachLink);
+
+            if (textOfEachLink.isEmpty()){
+                linksWithoutText++;
+            }else{
+                linksWithText++;
+            }
+
+        }
 
         //4. Print out how many link is missing text
         //5. Print out how many link has text
