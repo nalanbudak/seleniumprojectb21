@@ -20,6 +20,14 @@ public class P1_Xpath_CssSelector {
         //a. “Home” link
         WebElement homeLink = driver.findElement(By.xpath("//a[.='Home']"));
 
+        //Locating the same link using class attribute's value
+        //WebElement homeLink = driver.findElement(By.xpath("//a[@class='nav-link']"));
+
+        //Locating the same link using href attribute's value
+        //WebElement homeLink = driver.findElement(By.xpath("//a[@href='/']"));
+
+
+
         //b. “Forgot password” header
         //c. “E-mail” text
         //d. E-mail input box
