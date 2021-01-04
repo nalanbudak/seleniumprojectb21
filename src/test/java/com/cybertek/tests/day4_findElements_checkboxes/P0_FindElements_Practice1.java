@@ -36,9 +36,10 @@ public class P0_FindElements_Practice1 {
 
         }
 
-
         //#3- Print out how many links on the page
 
+        int numberOfLinks = listOfLinks.size();
 
+        System.out.println("numberOfLinks = " + numberOfLinks);
     }
 }
