@@ -1,7 +1,11 @@
 package com.cybertek.tests.day4_findElements_checkboxes;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class P0_FindElements_Practice1 {
 
@@ -15,6 +19,15 @@ public class P0_FindElements_Practice1 {
         driver.manage().window().maximize();
 
         //#2- Locate all of the LINKS on the page, and print out all the texts
+        // first, we need to find the locator that is returning us all of the links in the page
+        //body//a
+
+        // second, store all of the links in to a List of WebElements
+        
+        List<WebElement> listOfLinks = driver.findElements(By.xpath("//body//a"));
+
+            // third, create java logic to print out all of the texts of all links
+
         //#3- Print out how many links on the page
 
 
