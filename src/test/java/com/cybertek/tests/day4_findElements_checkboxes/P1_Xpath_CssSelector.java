@@ -54,7 +54,15 @@ public class P1_Xpath_CssSelector {
 
         //f. “Powered by Cybertek School” text
         WebElement footerText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
-        
+
         //4. Verify all WebElements are displayed.
+
+        if(homeLink.isDisplayed() && forgotPasswordHeader.isDisplayed()
+        && emailLabel.isDisplayed() && emailInputBox.isDisplayed()
+        && retrievePasswordButton.isDisplayed() && footerText.isDisplayed() ){
+            System.out.println("ALL WEB ELEMENTS ARE DISPLAYED. VERIFICATION PASSED!");
+        }else{
+            System.out.println("One or more of the web elements are not displayed. Verification FAILED!!!");
+        }
     }
 }
