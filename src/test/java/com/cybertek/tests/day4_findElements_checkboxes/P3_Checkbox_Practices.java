@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class P3_Checkbox_Practices {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //Practice: Cybertek Checkboxes
         //1. Go to http://practice.cybertekschool.com/checkboxes
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -39,8 +39,24 @@ public class P3_Checkbox_Practices {
         }
 
         //4. Click checkbox #1 to select it.
+        Thread.sleep(2000);
+        checkbox1.click();
+
         //5. Click checkbox #2 to deselect it.
+        Thread.sleep(2000);
+        checkbox2.click();
+
         //6. Confirm checkbox #1 is SELECTED.
+        if (checkbox1.isSelected()){
+            System.out.println("Checkbox#1 is selected. Default value verification PASSED!!!");
+        }else{
+            System.out.println("Checkbox#1 is NOT selected. Default value verification FAILED!");
+        }
         //7. Confirm checkbox #2 is NOT selected.
+        if(!checkbox2.isSelected()){
+            System.out.println("Checkbox#2 is NOT selected. Default value verification PASSED! ");
+        }else{
+            System.out.println("Checkbox#2 is selected. Default value verification FAILED!!!");
+        }
     }
 }
