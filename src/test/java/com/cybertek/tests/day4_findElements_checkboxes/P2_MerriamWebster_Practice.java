@@ -43,8 +43,16 @@ public class P2_MerriamWebster_Practice {
         }
 
         //4. Print out how many link is missing text
+        System.out.println("linksWithoutText = " + linksWithoutText);
+
         //5. Print out how many link has text
+        System.out.println("linksWithText = " + linksWithText);
+
         //6. Print out how many total link
+        int numberOfLinks = allLinks.size();
+
+        System.out.println("numberOfLinks = " + numberOfLinks);
+
     }
 
 }
