@@ -32,7 +32,11 @@ public class P3_Checkbox_Practices {
         }
 
         //3. Confirm checkbox #2 is SELECTED by default.
-
+        if (checkbox2.isSelected()){
+            System.out.println("Checkbox#2 is selected. Default value verification PASSED!!!");
+        }else{
+            System.out.println("Checkbox#2 is NOT selected. Default value verification FAILED!");
+        }
 
         //4. Click checkbox #1 to select it.
         //5. Click checkbox #2 to deselect it.
