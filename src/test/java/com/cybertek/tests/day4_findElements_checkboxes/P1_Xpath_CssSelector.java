@@ -38,7 +38,22 @@ public class P1_Xpath_CssSelector {
         //Using syntax #1, tagName[attribute='value']
         WebElement emailInputBox = driver.findElement(By.cssSelector("input[type='text']"));
 
+        //Option #2: Using "name" attribute to locate the same web element
+        //WebElement emailInputBox = driver.findElement(By.cssSelector("input[name='email']"));
+
         //e. “Retrieve password” button
+        //Locating the button using #2 cssSelector syntax.
+        //tagName.classValue
+        //tagName#idValue
+
+        //locating using id value
+        //WebElement retrievePasswordButton = driver.findElement(By.cssSelector("#form_submit"));
+
+        //locating using class value
+        WebElement retrievePasswordButton = driver.findElement(By.cssSelector("button.radius"));
+
+
+
         //f. “Powered by Cybertek School” text
         //4. Verify all WebElements are displayed.
     }
