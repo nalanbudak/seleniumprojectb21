@@ -41,5 +41,7 @@ public class P0_FindElements_Practice1 {
         int numberOfLinks = listOfLinks.size();
 
         System.out.println("numberOfLinks = " + numberOfLinks);
+
+        driver.close();
     }
 }
