@@ -26,9 +26,9 @@ public class P1_Xpath_CssSelector {
         //Locating the same link using href attribute's value
         //WebElement homeLink = driver.findElement(By.xpath("//a[@href='/']"));
 
-
-
         //b. “Forgot password” header
+        WebElement forgotPasswordHeader = driver.findElement(By.xpath("//h2[.='Forgot Password']"));
+
         //c. “E-mail” text
         //d. E-mail input box
         //e. “Retrieve password” button
