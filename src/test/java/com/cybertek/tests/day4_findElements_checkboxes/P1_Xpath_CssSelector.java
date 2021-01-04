@@ -52,9 +52,9 @@ public class P1_Xpath_CssSelector {
         //locating using class value
         WebElement retrievePasswordButton = driver.findElement(By.cssSelector("button.radius"));
 
-
-
         //f. “Powered by Cybertek School” text
+        WebElement footerText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
+        
         //4. Verify all WebElements are displayed.
     }
 }
