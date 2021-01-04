@@ -48,15 +48,15 @@ public class P3_Checkbox_Practices {
 
         //6. Confirm checkbox #1 is SELECTED.
         if (checkbox1.isSelected()){
-            System.out.println("Checkbox#1 is selected. Default value verification PASSED!!!");
+            System.out.println("Checkbox#1 is selected. Verification PASSED!!!");
         }else{
-            System.out.println("Checkbox#1 is NOT selected. Default value verification FAILED!");
+            System.out.println("Checkbox#1 is NOT selected. Verification FAILED!");
         }
         //7. Confirm checkbox #2 is NOT selected.
         if(!checkbox2.isSelected()){
-            System.out.println("Checkbox#2 is NOT selected. Default value verification PASSED! ");
+            System.out.println("Checkbox#2 is NOT selected. Verification PASSED! ");
         }else{
-            System.out.println("Checkbox#2 is selected. Default value verification FAILED!!!");
+            System.out.println("Checkbox#2 is selected. Verification FAILED!!!");
         }
     }
 }
