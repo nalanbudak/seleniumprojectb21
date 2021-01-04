@@ -30,6 +30,11 @@ public class P1_Xpath_CssSelector {
         WebElement forgotPasswordHeader = driver.findElement(By.xpath("//h2[.='Forgot Password']"));
 
         //c. “E-mail” text
+        WebElement emailLabel = driver.findElement(By.xpath("//label[@for='email']"));
+
+        //Locating the label using its TEXT with XPATH
+        //WebElement emailLabel = driver.findElement(By.xpath("//label[.='E-mail']"));
+
         //d. E-mail input box
         //e. “Retrieve password” button
         //f. “Powered by Cybertek School” text
