@@ -1,7 +1,10 @@
 package com.cybertek.tests.day5_testNG_intro_dropdowns;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -31,6 +34,15 @@ public class Dropdown_Introduction {
 
         //3. Verify "Simple dropdown" default selected value is correct
         //Expected: "Please select an option"
+
+        WebElement simpleDropdown = driver.findElement(By.xpath("//select[@id='dropdown']"));
+
+        Select select = new Select(simpleDropdown);
+
+        //This method will return us the currently selected option as a web element
+        WebElement currentlySelected = select.getFirstSelectedOption();
+
+        String expectedDefaultValue= "Please select an option";
 
 
         //4. Verify "State selection" default selected value is correct
