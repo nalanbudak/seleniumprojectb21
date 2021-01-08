@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -40,10 +41,12 @@ public class Dropdown_Introduction {
         Select select = new Select(simpleDropdown);
 
         //This method will return us the currently selected option as a web element
-        WebElement currentlySelected = select.getFirstSelectedOption();
+        WebElement currentlySelectedOption = select.getFirstSelectedOption();
 
         String expectedDefaultValue= "Please select an option";
+        String actualDefaultValue = currentlySelectedOption.getText();
 
+        Assert.assertEquals(actualDefaultValue, expectedDefaultValue);
 
         //4. Verify "State selection" default selected value is correct
         //Expected: "Select a State"
