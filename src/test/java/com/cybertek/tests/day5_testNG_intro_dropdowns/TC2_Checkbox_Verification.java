@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TC2_Checkbox_Verification {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //1. Open Chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
@@ -41,6 +41,8 @@ public class TC2_Checkbox_Verification {
         }
 
         //4. Click to checkbox under “Single Checkbox Demo” section
+        Thread.sleep(2000);
+
         checkbox1.click();
 
         //5. Verify “Success – Check box is checked” message is displayed.
@@ -49,6 +51,8 @@ public class TC2_Checkbox_Verification {
         }else{
             System.out.println("FAIL!");
         }
+
+        Thread.sleep(2000);
 
         driver.close();
 
