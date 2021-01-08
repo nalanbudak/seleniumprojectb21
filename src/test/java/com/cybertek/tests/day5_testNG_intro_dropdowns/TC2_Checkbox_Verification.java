@@ -34,6 +34,11 @@ public class TC2_Checkbox_Verification {
         //Locating checkbox
         WebElement checkbox1 = driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
 
+        if (!checkbox1.isSelected() && !successMessage.isDisplayed()){
+            System.out.println("Checkbox is not selected. Message is not displayed. Verification PASS!");
+        }else{
+            System.out.println("FAIL!");
+        }
 
 
         //4. Click to checkbox under “Single Checkbox Demo” section
