@@ -25,10 +25,11 @@ public class TC2_Checkbox_Verification {
         //3. Verify “Success – Check box is checked” message is NOT displayed.
 
         //Option #1: Using xpath and id attribute value to locate successMessage
-        WebElement successMessage = driver.findElement(By.xpath("//div[@id='txtAge']"));
         //Option #2: Using xpath and style attribute value: //div[@style='display: block;']
         //Option #3: Using xpath and text value: //div[.='Success - Check box is checked']
-        //Option #3: Using xpath and text value: //div[text()='Success - Check box is checked']
+        //Option #4: Using xpath and text value: //div[text()='Success - Check box is checked']
+        //Option #5: Using xpath and * instead of tagName: //*[@id=“txtAge”]
+        WebElement successMessage = driver.findElement(By.xpath("//div[@id='txtAge']"));
 
 
 
