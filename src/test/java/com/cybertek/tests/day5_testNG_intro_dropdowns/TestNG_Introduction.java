@@ -6,11 +6,17 @@ import org.testng.annotations.Test;
 
 public class TestNG_Introduction {
 
+    /*
+    @BeforeClass will make the method run once before everything else in the class.
+     */
    @BeforeClass
    public void setupClass(){
        System.out.println("Before class is running...");
    }
 
+    /*
+     @AfterClass will make the method run once after everything else in the class.
+      */
    @AfterClass
    public void teardownClass(){
        System.out.println("After class is running...");
