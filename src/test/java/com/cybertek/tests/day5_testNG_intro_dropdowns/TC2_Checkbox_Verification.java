@@ -31,6 +31,9 @@ public class TC2_Checkbox_Verification {
         //Option #5: Using xpath and * instead of tagName: //*[@id=“txtAge”]
         WebElement successMessage = driver.findElement(By.xpath("//div[@id='txtAge']"));
 
+        //Locating checkbox
+        WebElement checkbox1 = driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
+
 
 
         //4. Click to checkbox under “Single Checkbox Demo” section
