@@ -47,13 +47,14 @@ public class TestNG_Introduction {
        System.out.println("->Running test 3...");
 
        String str1 = "hello";
-       String str2 = "hello2asdfasdf";
+       String str2 = "hello";
+       String str3 = "hello";
 
        //assertTrue: expects a boolean value to be passed
        Assert.assertTrue(str1.equals(str2) , "Comparing hello word's failed.");
 
        //assertEquals: expects two arguments of the same type: String VS String etc.
-       Assert.assertEquals(str1, str2 , "Asserting with assertEquals on line 56");
+       Assert.assertEquals(str1, str3 , "Asserting with assertEquals on line 56");
 
        //the last string argument will be accepted as "failure message"
 
