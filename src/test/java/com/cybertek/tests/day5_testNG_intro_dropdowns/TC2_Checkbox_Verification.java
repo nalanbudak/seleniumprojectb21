@@ -40,8 +40,18 @@ public class TC2_Checkbox_Verification {
             System.out.println("FAIL!");
         }
 
-
         //4. Click to checkbox under “Single Checkbox Demo” section
+        checkbox1.click();
+
         //5. Verify “Success – Check box is checked” message is displayed.
+        if (checkbox1.isSelected() && successMessage.isDisplayed()){
+            System.out.println("Checkbox is selected. Message is displayed. Verification PASS!");
+        }else{
+            System.out.println("FAIL!");
+        }
+
+        driver.close();
+
+
     }
 }
