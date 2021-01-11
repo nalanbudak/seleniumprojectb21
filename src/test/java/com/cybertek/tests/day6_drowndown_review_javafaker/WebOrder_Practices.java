@@ -80,7 +80,8 @@ public class WebOrder_Practices {
         nameinput.sendKeys(faker.name().fullName());
         streetInput.sendKeys(faker.address().streetAddress());
         cityAddress.sendKeys(faker.address().cityName());
-        zipCode.sendKeys(faker.address().zipCode());
+
+        zipCode.sendKeys(faker.address().zipCode().replaceAll("-",""));
 
         //• Generate: name, street, city, state, zip code
         //10. Click on “visa” radio button
@@ -89,10 +90,17 @@ public class WebOrder_Practices {
 
         //11. Generate card number using JavaFaker
         WebElement inputCreditCard = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6"));
-        inputCreditCard.sendKeys(faker.finance().creditCard());
+        inputCreditCard.sendKeys(faker.finance().creditCard().replaceAll("-", ""));
 
+        //Enter ExpirationDate
+        WebElement inputExpirationDate = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox1"));
+
+        inputExpirationDate.sendKeys("01/26");
 
         //12. Click on “Process”
+        WebElement processButton = driver.findElement(By.linkText("Process"));
+        processButton.click();
+
         //13.Verify success message “New order has been successfully added.
     }
 
@@ -124,7 +132,7 @@ public class WebOrder_Practices {
         //additional 5 seconds before closing the browser
         Thread.sleep(5000);
 
-        driver.close();
+        //driver.close();
 
     }
 
