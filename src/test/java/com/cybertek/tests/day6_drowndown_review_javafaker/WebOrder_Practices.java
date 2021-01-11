@@ -9,11 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WebOrder_Practices {
 
-    //3. Enter username: “Tester”
-    //4. Enter password: “test”
-    //5. Click to Login button
-    //6. Print out count of all the links on landing page
-    //7. Print out each link text on this page
+
     WebDriver driver;
 
     @BeforeMethod
@@ -36,6 +32,10 @@ public class WebOrder_Practices {
 
     @Test
     public void test1_link_verifications(){
-
+        //3. Enter username: “Tester”
+        //4. Enter password: “test”
+        //5. Click to Login button
+        //6. Print out count of all the links on landing page
+        //7. Print out each link text on this page
     }
 }
