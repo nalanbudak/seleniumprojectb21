@@ -20,6 +20,21 @@ public class JavaFakerExamples {
         String fullName = faker.name().fullName();
         System.out.println("fullName = " + fullName);
 
+        String address = faker.address().fullAddress();
+        System.out.println("address = " + address);
+
+        String gameOfThrones = faker.gameOfThrones().house();
+        String gotQuote = faker.gameOfThrones().quote();
+
+        System.out.println("gotQuote = " + gotQuote);
+        System.out.println("gameOfThrones = " + gameOfThrones);
+
+        String chuckNorrisFact = faker.chuckNorris().fact();
+        System.out.println("chuckNorrisFact = " + chuckNorrisFact);
+
+        String ssn = faker.idNumber().ssnValid();
+
+        System.out.println("ssn = " + ssn);
 
     }
 }
