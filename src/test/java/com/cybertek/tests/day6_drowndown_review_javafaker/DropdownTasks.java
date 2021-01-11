@@ -153,7 +153,28 @@ public class DropdownTasks {
         }
 
 
+
+
     }
+
+    @Test
+    public void test5_non_select_dropdown(){
+
+        //We need to locate the non-select dropdown as regular web element
+        WebElement websiteDropdown = driver.findElement(By.xpath("//a[@id='dropdownMenuLink']"));
+
+        //3. Click to non-select dropdown
+        websiteDropdown.click();
+
+        //4. Select Facebook from dropdown
+        //5. Verify title is “Facebook - Log In or Sign Up”
+
+
+
+    }
+
+
+
 
     @AfterMethod
     public void tearDownMethod() throws InterruptedException {
