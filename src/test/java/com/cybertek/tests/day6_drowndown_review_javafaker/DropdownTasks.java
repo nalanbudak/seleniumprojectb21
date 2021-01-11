@@ -135,6 +135,9 @@ public class DropdownTasks {
 
             //4. Print out all selected values.
             System.out.println("Selected: " + each.getText());
+
+            //Verifying each option is selected:
+            Assert.assertTrue(each.isSelected(), "The option "+each.getText()+" is not selected!");
         }
 
         //5. Deselect all values.
