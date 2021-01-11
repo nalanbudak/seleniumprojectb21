@@ -93,12 +93,20 @@ public class DropdownTasks {
         String expectedMonth = "December";
         String expectedDay = "1";
 
-        //getting our actual values from browser
 
+        //getting our actual values from browser
         String actualYear = yearDropdown.getFirstSelectedOption().getText();
         String actualMonth = monthDropdown.getFirstSelectedOption().getText();
         String actualDay= dayDropdown.getFirstSelectedOption().getText();
 
+        //creating assertions to compare actual vs expected values
+
+        //AssertTrue expects one argument that is supposed to be returning boolean value
+        Assert.assertTrue(actualYear.equals(expectedYear));
+
+        Assert.assertTrue(actualMonth.equals(expectedMonth));
+
+        Assert.assertEquals(actualDay, expectedDay);
 
 
     }
