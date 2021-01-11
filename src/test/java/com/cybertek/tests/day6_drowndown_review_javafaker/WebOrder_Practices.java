@@ -70,19 +70,28 @@ public class WebOrder_Practices {
 
         //Locating web elements using ID locator
         WebElement nameinput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName"));
-        WebElement stritInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox2"));
+        WebElement streetInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox2"));
         WebElement cityAddress = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox3"));
         WebElement zipCode = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5"));
 
         //9. Fill address Info with JavaFaker
         Faker faker = new Faker();
 
-
-
+        nameinput.sendKeys(faker.name().fullName());
+        streetInput.sendKeys(faker.address().streetAddress());
+        cityAddress.sendKeys(faker.address().cityName());
+        zipCode.sendKeys(faker.address().zipCode());
 
         //• Generate: name, street, city, state, zip code
         //10. Click on “visa” radio button
+        WebElement visaRadioButton = driver.findElement(By.id("ctl00_MainContent_fmwOrder_cardList_0"));
+        visaRadioButton.click();
+
         //11. Generate card number using JavaFaker
+        WebElement inputCreditCard = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6"));
+        inputCreditCard.sendKeys(faker.finance().creditCard());
+
+
         //12. Click on “Process”
         //13.Verify success message “New order has been successfully added.
     }
