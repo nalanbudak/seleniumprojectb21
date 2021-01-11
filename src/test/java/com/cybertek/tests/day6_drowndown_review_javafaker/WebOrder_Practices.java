@@ -102,6 +102,8 @@ public class WebOrder_Practices {
         processButton.click();
 
         //13.Verify success message “New order has been successfully added.
+        WebElement successMessage = driver.findElement(By.xpath("//div[@class='buttons_process']/strong"));
+
     }
 
 
