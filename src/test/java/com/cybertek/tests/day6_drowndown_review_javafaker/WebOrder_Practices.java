@@ -65,7 +65,7 @@ public class WebOrder_Practices {
 
         //8. Click to “Calculate” button
         WebElement calculateButton = driver.findElement(By.xpath("//input[@value='Calculate']"));
-
+        calculateButton.click();
 
         //9. Fill address Info with JavaFaker
         //• Generate: name, street, city, state, zip code
