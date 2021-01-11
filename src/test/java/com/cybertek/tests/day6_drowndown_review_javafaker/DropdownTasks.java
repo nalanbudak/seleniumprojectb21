@@ -141,6 +141,18 @@ public class DropdownTasks {
         }
 
         //5. Deselect all values.
+        multipSelectDropdown.deselectAll();
+
+        for (WebElement each : allOptions) {
+            //assertTrue expecting true boolean value to pass the test
+            //Assert.assertTrue(!each.isSelected());
+
+            //Assert.assertFalse method is expecting "false" boolean value to pass the test.
+            //If expected result is "false" better to use this assertFalse
+            Assert.assertFalse(each.isSelected());
+        }
+
+
     }
 
     @AfterMethod
