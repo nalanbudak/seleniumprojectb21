@@ -64,6 +64,7 @@ public class WebOrder_Practices {
         inputQuantity.sendKeys("2");
 
         //8. Click to “Calculate” button
+        WebElement calculateButton = driver.findElement(By.xpath("//input[@value='Calculate']"));
 
 
         //9. Fill address Info with JavaFaker
