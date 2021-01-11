@@ -64,14 +64,32 @@ public class DropdownTasks {
 
 
     @Test
-    public void test3_date_dropdown_verification(){
-        //Select “December 1 , 1921” and verify it is selected.
-        //   Select year using : visible text
-        //   Select month using : value attribute
-        //   Select day using : index number
+    public void test3_date_dropdown_verification() throws InterruptedException {
 
-        //BREAK UNTIL 11.05AM CST
-        //BREAK UNTIL 12.05PM EST
+        //We need to locate all the dropdowns to be able to select options
+        Select yearDropdown = new Select(driver.findElement(By.xpath("//select[@id='year']")));
+        Select monthDropdown = new Select(driver.findElement(By.xpath("//select[@id='month']")));
+        Select dayDropdown = new Select(driver.findElement(By.xpath("//select[@id='day']")));
+
+        //for shortcut code moving:
+        //mac: command + shift + d
+        //window: control + shift + d
+
+        //Select “December 1 , 1922” and verify it is selected.
+        //   Select year using : visible text
+        Thread.sleep(1000);
+        yearDropdown.selectByVisibleText("1922");
+
+        //   Select month using : value attribute
+        Thread.sleep(1000);
+        monthDropdown.selectByValue("11");
+
+        //   Select day using : index number
+        Thread.sleep(1000);
+        dayDropdown.selectByIndex(0);
+
+
+
     }
 
     @AfterMethod
