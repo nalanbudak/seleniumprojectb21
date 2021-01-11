@@ -1,6 +1,7 @@
 package com.cybertek.tests.day6_drowndown_review_javafaker;
 
 import com.cybertek.utilities.WebDriverFactory;
+import com.cybertek.utilities.WebOrderUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,21 +33,15 @@ public class WebOrder_Practices {
         //implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+        WebOrderUtils.loginToSmartBear(driver);
+
     }
+
+
 
     @Test
     public void test1_link_verifications(){
-        //3. Enter username: “Tester”
-        WebElement inputUsername = driver.findElement(By.id("ctl00_MainContent_username"));
-        inputUsername.sendKeys("Tester");
 
-        //4. Enter password: “test”
-        WebElement inputPassword = driver.findElement(By.id("ctl00_MainContent_password"));
-        inputPassword.sendKeys("test");
-
-        //5. Click to Login button
-        WebElement loginButton = driver.findElement(By.id("ctl00_MainContent_login_button"));
-        loginButton.click();
 
         //6. Print out count of all the links on landing page
         List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
