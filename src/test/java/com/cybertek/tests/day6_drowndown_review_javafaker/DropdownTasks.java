@@ -29,14 +29,22 @@ public class DropdownTasks {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 
+
     }
 
     @Test
-    public void test2_verify_state_dropdown(){
+    public void test2_verify_state_dropdown() throws InterruptedException {
         // We need to locate the dropdown and create Select class object
-        Select stateDropdown = new Select(driver.findElement(By.xpath("")));
-        //3. Select Illinois
-        //4. Select Virginia
+        Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
+
+        //3. Select Illinois --> select by visible text
+        Thread.sleep(1000);
+        stateDropdown.selectByVisibleText("Illinois");
+
+        //4. Select Virginia --> select by value
+        Thread.sleep(1000);
+        stateDropdown.selectByValue("VA");
+
         //5. Select California
         //6. Verify final selected option is California.
     }
