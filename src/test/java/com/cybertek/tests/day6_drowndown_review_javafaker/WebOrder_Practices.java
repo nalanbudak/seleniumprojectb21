@@ -3,6 +3,7 @@ package com.cybertek.tests.day6_drowndown_review_javafaker;
 import com.cybertek.utilities.WebDriverFactory;
 import com.cybertek.utilities.WebOrderUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -39,16 +40,32 @@ public class WebOrder_Practices {
     }
 
     @Test
-    public void test2_create_order_with_java_faker(){
+    public void test2_create_order_with_java_faker() throws InterruptedException {
         //6. Click on Order
         WebElement orderLink = driver.findElement(By.linkText("Order"));
         orderLink.click();
 
         //7. Select familyAlbum from product, set quantity to 2
+
+        //Locating the dropdown
         Select productDropdown = new Select(driver.findElement(By.id("ctl00_MainContent_fmwOrder_ddlProduct")));
 
+        //Selecting "FamilyAlbum" from options using selectByVisibleText method
+        productDropdown.selectByVisibleText("FamilyAlbum");
+
+        //Locate quantityInput box
+        WebElement inputQuantity = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
+
+        //inputQuantity.clear();
+        Thread.sleep(1000);
+        inputQuantity.sendKeys(Keys.BACK_SPACE );
+
+        Thread.sleep(1000);
+        inputQuantity.sendKeys("2");
 
         //8. Click to “Calculate” button
+
+
         //9. Fill address Info with JavaFaker
         //• Generate: name, street, city, state, zip code
         //10. Click on “visa” radio button
