@@ -4,6 +4,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -46,8 +47,19 @@ public class WebOrder_Practices {
         WebElement loginButton = driver.findElement(By.id("ctl00_MainContent_login_button"));
         loginButton.click();
 
-
         //6. Print out count of all the links on landing page
         //7. Print out each link text on this page
     }
+
+    @AfterMethod
+    public void tearDownMethod() throws InterruptedException {
+
+        //additional 5 seconds before closing the browser
+        Thread.sleep(5000);
+
+        driver.close();
+
+    }
+
+
 }
