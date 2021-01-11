@@ -88,6 +88,11 @@ public class DropdownTasks {
         Thread.sleep(1000);
         dayDropdown.selectByIndex(0);
 
+        //creating expected values
+        String expectedYear = "1922";
+        String expectedMonth = "December";
+        String expectedDay = "1";
+
 
 
     }
