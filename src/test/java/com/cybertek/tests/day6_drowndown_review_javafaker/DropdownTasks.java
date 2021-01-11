@@ -176,8 +176,11 @@ public class DropdownTasks {
         //Click to facebook link to go to page
         facebookLink.click();
 
-
         //5. Verify title is “Facebook - Log In or Sign Up”
+        String expectedTitle = "Facebook - Log In or Sign Up";
+        String actualTitle = driver.getTitle();
+
+        Assert.assertEquals(actualTitle, expectedTitle, "Title is not as expected!!!");
 
 
 
