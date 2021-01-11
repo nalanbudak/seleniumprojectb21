@@ -3,12 +3,14 @@ package com.cybertek.tests.day6_drowndown_review_javafaker;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class DropdownTasks {
@@ -116,11 +118,25 @@ public class DropdownTasks {
     }
 
     @Test
-    public void test4_multiple_select_dropdown(){
-        //3. Select all the options from multiple select dropdown.
+    public void test4_multiple_select_dropdown() throws InterruptedException {
+
+        //Locating dropdown to work on it
         Select multipSelectDropdown = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
 
-        //4. Print out all selected values.
+        //3. Select all the options from multiple select dropdown.
+        List<WebElement> allOptions = multipSelectDropdown.getOptions();
+        
+        //Loop through the List and click to each option
+        //iter for creating short cut for:each loop
+        for (WebElement each : allOptions) {
+
+            Thread.sleep(500);
+            each.click();
+
+            //4. Print out all selected values.
+            System.out.println("Selected: " + each.getText());
+        }
+
         //5. Deselect all values.
     }
 
