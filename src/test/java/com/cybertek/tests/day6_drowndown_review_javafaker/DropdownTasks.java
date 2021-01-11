@@ -117,7 +117,11 @@ public class DropdownTasks {
 
     @Test
     public void test4_multiple_select_dropdown(){
+        //3. Select all the options from multiple select dropdown.
+        Select multipSelectDropdown = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
 
+        //4. Print out all selected values.
+        //5. Deselect all values.
     }
 
     @AfterMethod
