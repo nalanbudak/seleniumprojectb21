@@ -62,6 +62,18 @@ public class DropdownTasks {
 
     }
 
+
+    @Test
+    public void test3_date_dropdown_verification(){
+        //Select “December 1 , 1921” and verify it is selected.
+        //   Select year using : visible text
+        //   Select month using : value attribute
+        //   Select day using : index number
+
+        //BREAK UNTIL 11.05AM CST
+        //BREAK UNTIL 12.05PM EST
+    }
+
     @AfterMethod
     public void tearDownMethod() throws InterruptedException {
 
