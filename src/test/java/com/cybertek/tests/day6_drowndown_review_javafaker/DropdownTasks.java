@@ -1,7 +1,9 @@
 package com.cybertek.tests.day6_drowndown_review_javafaker;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,7 +33,12 @@ public class DropdownTasks {
 
     @Test
     public void test2_verify_state_dropdown(){
-
+        // We need to locate the dropdown and create Select class object
+        Select stateDropdown = new Select(driver.findElement(By.xpath("")));
+        //3. Select Illinois
+        //4. Select Virginia
+        //5. Select California
+        //6. Verify final selected option is California.
     }
 
     @AfterMethod
