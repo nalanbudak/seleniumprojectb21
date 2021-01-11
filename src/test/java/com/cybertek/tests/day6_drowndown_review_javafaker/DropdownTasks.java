@@ -45,7 +45,10 @@ public class DropdownTasks {
         Thread.sleep(1000);
         stateDropdown.selectByValue("VA");
 
-        //5. Select California
+        //5. Select California --> select by index
+        Thread.sleep(1000);
+        stateDropdown.selectByIndex(5);
+
         //6. Verify final selected option is California.
     }
 
