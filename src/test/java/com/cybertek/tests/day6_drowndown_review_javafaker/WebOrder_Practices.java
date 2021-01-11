@@ -2,6 +2,7 @@ package com.cybertek.tests.day6_drowndown_review_javafaker;
 
 import com.cybertek.utilities.WebDriverFactory;
 import com.cybertek.utilities.WebOrderUtils;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -67,7 +68,18 @@ public class WebOrder_Practices {
         WebElement calculateButton = driver.findElement(By.xpath("//input[@value='Calculate']"));
         calculateButton.click();
 
+        //Locating web elements using ID locator
+        WebElement nameinput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName"));
+        WebElement stritInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox2"));
+        WebElement cityAddress = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox3"));
+        WebElement zipCode = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5"));
+
         //9. Fill address Info with JavaFaker
+        Faker faker = new Faker();
+
+
+
+
         //• Generate: name, street, city, state, zip code
         //10. Click on “visa” radio button
         //11. Generate card number using JavaFaker
