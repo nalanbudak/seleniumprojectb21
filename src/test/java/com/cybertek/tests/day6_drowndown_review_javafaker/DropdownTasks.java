@@ -15,6 +15,12 @@ public class DropdownTasks {
 
     WebDriver driver;
 
+//    @BeforeClass
+//    public void setupClass(){
+//        //1. Open Chrome browser
+//        driver = WebDriverFactory.getDriver("chrome");
+//    }
+
     @BeforeMethod
     public void setupMethod(){
         //1. Open Chrome browser
@@ -28,8 +34,6 @@ public class DropdownTasks {
 
         //implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-
 
     }
 
@@ -102,12 +106,17 @@ public class DropdownTasks {
         //creating assertions to compare actual vs expected values
 
         //AssertTrue expects one argument that is supposed to be returning boolean value
-        Assert.assertTrue(actualYear.equals(expectedYear));
+        Assert.assertTrue(actualYear.equals(expectedYear), "ActualYear is not equal to ExpectedYear!!!");
 
         Assert.assertTrue(actualMonth.equals(expectedMonth));
 
         Assert.assertEquals(actualDay, expectedDay);
 
+
+    }
+
+    @Test
+    public void test4_multiple_select_dropdown(){
 
     }
 
