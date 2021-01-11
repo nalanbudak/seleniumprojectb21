@@ -2,6 +2,7 @@ package com.cybertek.tests.day6_drowndown_review_javafaker;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,16 @@ public class DropdownTasks {
 
     @Test
     public void test2_verify_state_dropdown(){
+
+    }
+
+    @AfterMethod
+    public void tearDownMethod() throws InterruptedException {
+
+        //additional 5 seconds before closing the browser
+        Thread.sleep(5000);
+
+        driver.close();
 
     }
 
