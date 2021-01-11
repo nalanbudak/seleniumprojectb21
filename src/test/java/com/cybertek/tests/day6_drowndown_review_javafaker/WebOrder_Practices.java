@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class WebOrder_Practices {
@@ -48,7 +49,18 @@ public class WebOrder_Practices {
         loginButton.click();
 
         //6. Print out count of all the links on landing page
+        List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
+
+        System.out.println("Number of all links in this page: " + allLinks.size());
+
         //7. Print out each link text on this page
+        for (WebElement each : allLinks) {
+
+            System.out.println("eachLink = "+each.getText());
+
+        }
+
+
     }
 
     @AfterMethod
