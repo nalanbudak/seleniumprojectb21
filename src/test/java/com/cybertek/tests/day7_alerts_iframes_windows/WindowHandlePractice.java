@@ -63,6 +63,16 @@ public class WindowHandlePractice {
         }
 
         //7. Assert: Title is “New Window”
+        String finalExpectedTitle = "New Window";
+        String finalActualTitle = driver.getTitle();
+
+        Assert.assertEquals(finalActualTitle, finalExpectedTitle);
+
+        //If i wanted to switch back to main page:
+
+        driver.switchTo().window(mainHandle);
+
+
     }
 
 
