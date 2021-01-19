@@ -1,9 +1,12 @@
 package com.cybertek.tests.day7_alerts_iframes_windows;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,18 +25,33 @@ public class AlertPractices {
 
     }
 
+    //TC #1: Information alert practice
+
+    @Test
+    public void p1_information_alert_test(){
+        //Locating the button for alert to click
+        WebElement informationAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
+
+        //Clicking to the button for alert to be displayed
+        informationAlertButton.click();
+
+        //5. Verify "You successfully clicked an alert" text is displayed.
+
+
+
+        //4. Click to OK button from the alert
+        //3. Click to "Click for JS Alert" button
+
+    }
+
+
+
+
     //AfterMethod will wait 5 seconds before closing the browser
     @AfterMethod
     public void teardownMethod() throws InterruptedException {
         Thread.sleep(5000);
         driver.close();
     }
-
-    //TC #1: Information alert practice
-
-    //3. Click to "Click for JS Alert" button
-    //4. Click to OK button from the alert
-    //5. Verify "You successfuly clicked an alert" text is displayed.
-
 
 }
