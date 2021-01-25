@@ -1,14 +1,11 @@
 package com.cybertek.tests.day8_testbase_properties_driver;
 
-import com.cybertek.utilities.WebDriverFactory;
+import com.cybertek.tests.base.TestBase;
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.WebOrderUtils;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class WebTablePractices {
+public class WebTablePractices extends TestBase {
 
     @Test
     public void verify_order_test() throws InterruptedException {
@@ -16,7 +13,8 @@ public class WebTablePractices {
 
         WebOrderUtils.loginToSmartBear(driver);
 
-        Thread.sleep(1000);
+        //This is re-usable method we created in BrowserUtil class to replace Thread.sleep
+        BrowserUtils.sleep(1);
 
         //Verify "Mark Smith" is in the list
         WebOrderUtils.verifyOrder(driver, "Mark Smith");
