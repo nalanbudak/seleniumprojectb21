@@ -23,13 +23,15 @@ public class ConfigurationReader {
             //closing the file in JVM Memory
             file.close();
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     //#4- Use the object to read from the configuration.properties file
+    public static String getProperty(String keyWord){
+        return properties.getProperty(keyWord);
+    }
 
 
 }
