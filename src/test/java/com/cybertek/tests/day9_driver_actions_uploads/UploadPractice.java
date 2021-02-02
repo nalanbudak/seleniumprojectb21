@@ -4,6 +4,7 @@ import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UploadPractice {
@@ -37,6 +38,13 @@ public class UploadPractice {
         //Locating the 'File Uploaded!' Header
         WebElement fileUploadedMessage = Driver.getDriver().findElement(By.tagName("h3"));
 
+        //Asserting the message is displayed
+        Assert.assertTrue(fileUploadedMessage.isDisplayed());
+
+        //Closing the driver
+        // This will set the driver value to null so that in the future when we use
+        // Driver.getDriver() it will be able to create new driver and continue with no issues.
+        Driver.closeDriver();
     }
 
 
