@@ -55,7 +55,8 @@ public class DriverUtilsPractice {
         //Calling the custom method we created to close the browser from Driver class
         Driver.closeDriver();
 
-
+        //BREAK UNTIL 1PM CST
+        //BREAK UNTIL 2PM EST
 
     }
 
