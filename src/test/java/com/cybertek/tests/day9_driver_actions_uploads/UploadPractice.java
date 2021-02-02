@@ -1,5 +1,6 @@
 package com.cybertek.tests.day9_driver_actions_uploads;
 
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,7 +26,16 @@ public class UploadPractice {
 
         WebElement uploadButton = Driver.getDriver().findElement(By.id("file-submit"));
 
+        BrowserUtils.sleep(2);
 
+        //Sending already created path of the file into the 'chooseFile' webElement
+        chooseFile.sendKeys(path);
+
+        //Clicking 'uploadButton' to upload the file
+        uploadButton.click();
+
+        //Locating the 'File Uploaded!' Header
+        WebElement fileUploadedMessage = Driver.getDriver().findElement(By.tagName("h3"));
 
     }
 
