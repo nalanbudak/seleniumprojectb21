@@ -30,7 +30,7 @@ public class DriverUtilsPractice {
         //Search for a value
         WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
 
-        String searchValue = "wooden spoon";
+        String searchValue = ConfigurationReader.getProperty("searchValue");
 
         searchBox.sendKeys(searchValue + Keys.ENTER);
 
