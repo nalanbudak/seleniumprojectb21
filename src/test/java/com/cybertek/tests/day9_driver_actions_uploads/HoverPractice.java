@@ -47,10 +47,15 @@ public class HoverPractice {
         //5. Assert:
         //a. “name: user2” is displayed
         Assert.assertTrue(user2.isDisplayed(), "User2 is not displayed. FAILED!!!");
+        BrowserUtils.sleep(1);
 
         //6. Hover over to third image
+        actions.moveToElement(img3).perform();
+
         //7. Confirm:
         //a. “name: user3” is displayed
+        Assert.assertTrue(user3.isDisplayed(), "User3 is not displayed. FAILED!!!");
+
     }
 
 }
