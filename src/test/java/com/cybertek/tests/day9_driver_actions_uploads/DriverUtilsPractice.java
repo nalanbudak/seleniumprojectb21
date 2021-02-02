@@ -5,14 +5,13 @@ import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DriverUtilsPractice {
 
-    public WebDriver driver;
+
     @Test
     public void simple_google_search_test(){
 
@@ -55,10 +54,17 @@ public class DriverUtilsPractice {
         //Calling the custom method we created to close the browser from Driver class
         Driver.closeDriver();
 
+        //Driver.getDriver().close();
+        //Driver.getDriver().quit();
+
+        Driver.getDriver().get("https://www.etsy.com");
+
         //BREAK UNTIL 1PM CST
         //BREAK UNTIL 2PM EST
 
     }
+
+
 
 
 }
