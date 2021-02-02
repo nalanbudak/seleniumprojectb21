@@ -41,7 +41,7 @@ public class Driver {
             }
         }
 
-
+        //This same driver will be returned every time we call Driver.getDriver() method
         return driver;
 
     }
