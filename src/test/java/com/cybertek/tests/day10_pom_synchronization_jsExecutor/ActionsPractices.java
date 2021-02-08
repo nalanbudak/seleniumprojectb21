@@ -27,6 +27,14 @@ public class ActionsPractices {
         //locating big circle
         WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
 
+        //To be able to drag And drop we need to create Actions object
+        Actions actions = new Actions(Driver.getDriver());
+
+        //Use the actions object to reach Actions class methods
+        //source --> what you want to click and hold. in our case; small circle.
+        //target --> where you want to drop the "source" web element. in our case; big circle.
+        actions.dragAndDrop(smallCircle, bigCircle).perform();
+        //actions.perform();
 
 
         //3. Assert:
