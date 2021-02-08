@@ -2,7 +2,9 @@ package com.cybertek.tests.day10_pom_synchronization_jsExecutor;
 
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class JSExecutorPractices {
@@ -28,7 +30,25 @@ public class JSExecutorPractices {
 
         }
 
+        //We can pass -pixels to move back up with this function
+        js.executeScript("window.scrollBy(0, -750)");
+        BrowserUtils.sleep(1);
+        js.executeScript("window.scrollBy(0, -750)");
 
+
+    }
+
+    @Test
+    public void scroll_using_jsexecutor_test2(){
+        Driver.getDriver().get("http://practice.cybertekschool.com/large");
+
+        //Create obj of js executor
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
+        WebElement cybertekSchoolLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+
+        //use "js" with different javascript function
+        js.executeScript("arguments[0].scrollIntoView(true)");
     }
 
 }
