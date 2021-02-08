@@ -18,8 +18,17 @@ public class ActionsPractices {
 
         //Handling cookie pop-up (by clicking Agree button)
         WebElement cookieAgreeButton = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
+        cookieAgreeButton.click();
 
         //2. Drag and drop the small circle to bigger circle.
+        //locating small circle
+        WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
+
+        //locating big circle
+        WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
+
+
+
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
     }
