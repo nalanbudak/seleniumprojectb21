@@ -17,6 +17,7 @@ public class ActionsPractices {
         Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
 
         //Handling cookie pop-up (by clicking Agree button)
+        BrowserUtils.sleep(2);
         WebElement cookieAgreeButton = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
         cookieAgreeButton.click();
 
@@ -33,6 +34,7 @@ public class ActionsPractices {
         //Use the actions object to reach Actions class methods
         //source --> what you want to click and hold. in our case; small circle.
         //target --> where you want to drop the "source" web element. in our case; big circle.
+        BrowserUtils.sleep(2);
         actions.dragAndDrop(smallCircle, bigCircle).perform();
         //actions.perform();
 
