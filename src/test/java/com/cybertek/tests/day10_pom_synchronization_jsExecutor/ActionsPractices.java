@@ -12,6 +12,19 @@ import org.testng.annotations.Test;
 public class ActionsPractices {
 
     @Test
+    public void p3_drag_and_drop(){
+        //1. Go to https://demos.telerik.com/kendo-ui/dragdrop/index
+        Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+
+        //Handling cookie pop-up (by clicking Agree button)
+        WebElement cookieAgreeButton = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
+
+        //2. Drag and drop the small circle to bigger circle.
+        //3. Assert:
+        //-Text in big circle changed to: “You did great!”
+    }
+
+    @Test
     public void p2_double_click_test(){
         //1. Go to https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick2
         Driver.getDriver().get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick2");
@@ -23,7 +36,6 @@ public class ActionsPractices {
 
         //3. Double click on the text “Double-click me to change my text color.”
         Actions actions = new Actions(Driver.getDriver());
-
 
         BrowserUtils.sleep(2);
         //using this object we can double click to any web element
