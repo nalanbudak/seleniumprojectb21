@@ -5,6 +5,7 @@ import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -29,6 +30,14 @@ public class ActionsPractices {
         actions.doubleClick(textToDoubleClick).perform();
 
         //4. Assert: Text’s “style” attribute value contains “red”.
+        String expected = "red";
+
+        // will return attribute value of style
+        //style="color: red;"
+        String actual = textToDoubleClick.getAttribute("style");
+
+        Assert.assertTrue(actual.contains(expected));
+
     }
 
     @AfterMethod
