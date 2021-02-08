@@ -38,9 +38,14 @@ public class ActionsPractices {
         actions.dragAndDrop(smallCircle, bigCircle).perform();
         //actions.perform();
 
+        //actions.moveToElement(smallCircle).clickAndHold(smallCircle).moveToElement(bigCircle).release().perform();
 
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
+        String expected = "You did great!";
+        String actual = bigCircle.getText();
+
+        Assert.assertTrue(actual.equals(expected));
     }
 
     @Test
