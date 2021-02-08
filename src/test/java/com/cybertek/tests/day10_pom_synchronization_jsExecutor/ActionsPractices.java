@@ -46,6 +46,8 @@ public class ActionsPractices {
         String actual = bigCircle.getText();
 
         Assert.assertTrue(actual.equals(expected));
+        //break until 11.10am CST
+        //break until 12.10pm EST
     }
 
     @Test
