@@ -46,9 +46,17 @@ public class JSExecutorPractices {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
         WebElement cybertekSchoolLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+        WebElement homeLink = Driver.getDriver().findElement(By.linkText("Home"));
 
+        BrowserUtils.sleep(2);
         //use "js" with different javascript function
-        js.executeScript("arguments[0].scrollIntoView(true)");
+        js.executeScript("arguments[0].scrollIntoView(true)", cybertekSchoolLink);
+        //This function says: scrollTo first argument (argument[0])
+
+        BrowserUtils.sleep(2);
+        //moving back up in the page
+        js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
+
     }
 
 }
