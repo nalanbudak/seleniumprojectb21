@@ -28,6 +28,8 @@ public class LoginPage {
 
 //    @FindBy(id = "ctl00_MainContent_status")
 //    public List<WebElement> list;
+    //BREAK UNTIL 3.05PM CST
+    //BREAK UNTIL 4.05PM EST
 
 
 
