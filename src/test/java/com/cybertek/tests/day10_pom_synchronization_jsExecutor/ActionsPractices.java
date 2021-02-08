@@ -1,4 +1,4 @@
-package com.cybertek.tests.pom_synchronization_jsExecutor;
+package com.cybertek.tests.day10_pom_synchronization_jsExecutor;
 
 import org.testng.annotations.Test;
 
