@@ -26,6 +26,9 @@ public class LoginPage {
     @FindBy(id = "ctl00_MainContent_status")
     public WebElement errorMessage;
 
+//    @FindBy(id = "ctl00_MainContent_status")
+//    public List<WebElement> list;
+
 
 
 }

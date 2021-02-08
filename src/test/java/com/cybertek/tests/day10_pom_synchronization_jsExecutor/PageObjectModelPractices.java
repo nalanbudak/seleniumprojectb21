@@ -25,6 +25,8 @@ public class PageObjectModelPractices {
         String username = ConfigurationReader.getProperty("usernameSmartBear");
         loginPage.inputUsername.sendKeys(username);
 
+
+
         String password = ConfigurationReader.getProperty("passwordSmartBear");
         loginPage.inputPassword.sendKeys(password);
 
