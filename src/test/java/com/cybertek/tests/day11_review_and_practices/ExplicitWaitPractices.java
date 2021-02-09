@@ -1,6 +1,8 @@
 package com.cybertek.tests.day11_review_and_practices;
 
+import com.cybertek.pages.DynamicLoad1Page;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class ExplicitWaitPractices {
@@ -11,8 +13,18 @@ public class ExplicitWaitPractices {
         //TC#41 : Dynamically Loaded Page Elements 1
         //1. Go to http://practice.cybertekschool.com/dynamic_loading/1
         Driver.getDriver().get("http://practice.cybertekschool.com/dynamic_loading/1");
+
+        //Creating the object of the class to be able to reach web elements from that class
+        DynamicLoad1Page dynamicLoad1Page = new DynamicLoad1Page();
+
         //2. Click to start
+        dynamicLoad1Page.startButton.click();
+
         //3. Wait until loading bar disappears
+        //To be able to wait until loading bar disappears we will use WebDriverWait class and its obj
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+
+
         //4. Assert username inputbox is displayed
         //5. Enter username: tomsmith
         //6. Enter password: incorrectpassword
