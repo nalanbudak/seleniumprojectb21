@@ -33,8 +33,14 @@ public class ExplicitWaitPractices {
         Assert.assertTrue(dynamicLoad1Page.inputUsername.isDisplayed());
 
         //5. Enter username: tomsmith
+        dynamicLoad1Page.inputUsername.sendKeys("tomsmith");
+
         //6. Enter password: incorrectpassword
+        dynamicLoad1Page.inputPassword.sendKeys("asdfasdf");
+
         //7. Click to Submit button
+        dynamicLoad1Page.submitButton.click();
+
         //8. Assert “Your password is invalid!” text is displayed.
         //Note: Follow POM Design Pattern
     }
