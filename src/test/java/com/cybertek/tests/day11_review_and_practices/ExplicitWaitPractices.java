@@ -1,5 +1,6 @@
 package com.cybertek.tests.day11_review_and_practices;
 
+import com.cybertek.utilities.Driver;
 import org.testng.annotations.Test;
 
 public class ExplicitWaitPractices {
@@ -9,6 +10,7 @@ public class ExplicitWaitPractices {
     public void dynamic_load_page1(){
         //TC#41 : Dynamically Loaded Page Elements 1
         //1. Go to http://practice.cybertekschool.com/dynamic_loading/1
+        Driver.getDriver().get("http://practice.cybertekschool.com/dynamic_loading/1");
         //2. Click to start
         //3. Wait until loading bar disappears
         //4. Assert username inputbox is displayed
