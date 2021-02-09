@@ -24,6 +24,7 @@ public class WebDriverWaitPractices {
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
 
 
+
         DynamicLoad7Page dynamicLoad7Page = new DynamicLoad7Page();
 
         // 3.Assert : Message "Done" is displayed.
