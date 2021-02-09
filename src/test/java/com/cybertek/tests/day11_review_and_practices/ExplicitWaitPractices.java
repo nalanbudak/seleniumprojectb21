@@ -2,7 +2,9 @@ package com.cybertek.tests.day11_review_and_practices;
 
 import com.cybertek.pages.DynamicLoad1Page;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ExplicitWaitPractices {
@@ -24,8 +26,12 @@ public class ExplicitWaitPractices {
         //To be able to wait until loading bar disappears we will use WebDriverWait class and its obj
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
+        //using the object, we will create our expected condition: Wait until loading bar disappears
+        wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.loadingBar));
 
         //4. Assert username inputbox is displayed
+        Assert.assertTrue(dynamicLoad1Page.inputUsername.isDisplayed());
+
         //5. Enter username: tomsmith
         //6. Enter password: incorrectpassword
         //7. Click to Submit button
