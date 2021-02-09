@@ -1,0 +1,18 @@
+package com.cybertek.pages;
+
+// This is a sign-up page for the link below:
+// http://practice.cybertekschool.com/sign_up
+
+import com.cybertek.utilities.Driver;
+import org.openqa.selenium.support.PageFactory;
+
+public class SignUpPage {
+
+    public SignUpPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+
+
+
+}
