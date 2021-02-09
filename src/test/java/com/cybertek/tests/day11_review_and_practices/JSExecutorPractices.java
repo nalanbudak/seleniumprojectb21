@@ -33,8 +33,21 @@ public class JSExecutorPractices {
 
         //click using js executor
         BrowserUtils.sleep(1);
-        js.executeScript("arguments[0].click();", signUpPage.signUpButton);
+        js.executeScript("arguments[0].click()", signUpPage.signUpButton);
 
+
+    }
+
+
+    @Test
+    public void opening_tabs_using_jsExecutor(){
+
+        Driver.getDriver().get("https://www.amazon.com");
+
+        //Downcasting our driver type directly in one line
+        ((JavascriptExecutor)Driver.getDriver()).executeScript("window.open('https://google.com','_blank');");
+        ((JavascriptExecutor)Driver.getDriver()).executeScript("window.open('https://etsy.com','_blank');");
+        ((JavascriptExecutor)Driver.getDriver()).executeScript("window.open('https://facebook.com','_blank');");
 
     }
 
