@@ -46,8 +46,7 @@ public class ActionsPractices {
         String actual = bigCircle.getText();
 
         Assert.assertTrue(actual.equals(expected));
-        //break until 11.10am CST
-        //break until 12.10pm EST
+
     }
 
     @Test
@@ -78,7 +77,7 @@ public class ActionsPractices {
 
     }
 
-    @AfterMethod
+   @AfterMethod
     public void tearDownMethod(){
         BrowserUtils.sleep(10);
         Driver.closeDriver();

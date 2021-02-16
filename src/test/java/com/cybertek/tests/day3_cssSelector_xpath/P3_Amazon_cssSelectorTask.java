@@ -25,7 +25,7 @@ public class P3_Amazon_cssSelectorTask {
         //WebElement amazonSearchBar = driver.findElement(By.cssSelector("input#twotabsearchtextbox"));
         // tagname[attribute='value']
 
-        amazonSearchBar.sendKeys("apple" + Keys.ENTER);
+        amazonSearchBar.sendKeys("apple" + Keys.ENTER);    // sendKeys====>  It will send the given String to the previously located web element
 
         /*
         How to open search bar in Chrome:

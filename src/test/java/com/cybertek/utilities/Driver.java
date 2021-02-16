@@ -33,11 +33,11 @@ public class Driver {
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 default:
-                        WebDriverManager.chromedriver().setup();
-                        driver = new ChromeDriver();
-                        driver.manage().window().maximize();
-                        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                        break;
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
             }
         }
 

@@ -10,8 +10,8 @@ public class LoginPage {
     //1- We initialize driver and object of current class by using
     // PageFactory.initElements(driver, this);
     public LoginPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+        PageFactory.initElements(Driver.getDriver(), this);  //this : stands for the object of the current class
+    }                                                             //Driver.getDriver(); returns us the current WebDriver instance.
 
     //2- We use @FindBy Annotation
     @FindBy(id = "ctl00_MainContent_username")

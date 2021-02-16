@@ -23,7 +23,7 @@ public class P2_MerriamWebster_Practice {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         //3. Print out the texts of all links
-        List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
+        List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));    // body nin icindeki butun elementleri verecek
 
         int linksWithText = 0;
         int linksWithoutText = 0;
@@ -31,8 +31,8 @@ public class P2_MerriamWebster_Practice {
         for (WebElement eachLink : allLinks){
 
             String textOfEachLink = eachLink.getText();
-
             System.out.println(textOfEachLink);
+
 
             if (textOfEachLink.isEmpty()){
                 linksWithoutText++;

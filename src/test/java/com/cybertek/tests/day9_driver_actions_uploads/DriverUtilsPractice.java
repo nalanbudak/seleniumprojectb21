@@ -43,6 +43,7 @@ public class DriverUtilsPractice {
         //expected --> comes from documentation
         String expectedInTitle = searchValue;
 
+
         //We are adding 2 seconds just to wait for Firefox to catch up
 
         System.out.println("actualTitle = " + actualTitle);
@@ -58,9 +59,6 @@ public class DriverUtilsPractice {
         //Driver.getDriver().quit();
 
         Driver.getDriver().get("https://www.etsy.com");
-
-        //BREAK UNTIL 1PM CST
-        //BREAK UNTIL 2PM EST
 
     }
 

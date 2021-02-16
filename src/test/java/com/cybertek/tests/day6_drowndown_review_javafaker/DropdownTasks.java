@@ -38,6 +38,7 @@ public class DropdownTasks {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
+//==========================================================================================
 
     @Test
     public void test2_verify_state_dropdown() throws InterruptedException {
@@ -67,7 +68,7 @@ public class DropdownTasks {
         Assert.assertEquals(actualOption, expectedOption, "Final selected option is not as expected.");
 
     }
-
+//==========================================================================================
 
     @Test
     public void test3_date_dropdown_verification() throws InterruptedException {
@@ -101,6 +102,7 @@ public class DropdownTasks {
 
 
         //getting our actual values from browser
+
         String actualYear = yearDropdown.getFirstSelectedOption().getText();
         String actualMonth = monthDropdown.getFirstSelectedOption().getText();
         String actualDay= dayDropdown.getFirstSelectedOption().getText();
@@ -114,8 +116,8 @@ public class DropdownTasks {
 
         Assert.assertEquals(actualDay, expectedDay);
 
-
     }
+//==========================================================================================
 
     @Test
     public void test4_multiple_select_dropdown() throws InterruptedException {
@@ -152,10 +154,8 @@ public class DropdownTasks {
             Assert.assertFalse(each.isSelected());
         }
 
-
-
-
     }
+//==========================================================================================
 
     @Test
     public void test5_non_select_dropdown() throws InterruptedException {
@@ -182,12 +182,8 @@ public class DropdownTasks {
 
         Assert.assertEquals(actualTitle, expectedTitle, "Title is not as expected!!!");
 
-
-
     }
-
-
-
+    //==========================================================================================
 
     @AfterMethod
     public void tearDownMethod() throws InterruptedException {
@@ -195,7 +191,7 @@ public class DropdownTasks {
         //additional 5 seconds before closing the browser
         Thread.sleep(5000);
 
-        driver.close();
+      //  driver.close();
 
     }
 

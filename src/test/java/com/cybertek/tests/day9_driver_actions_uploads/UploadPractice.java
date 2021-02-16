@@ -21,7 +21,7 @@ public class UploadPractice {
         Driver.getDriver().get("http://practice.cybertekschool.com/upload");
 
         //Find any file that is not too big in size. And get the path of the file.
-        String path = "/Users/cybertekchicago-1/Desktop/fileToUpload.png";
+        String path = "/Users/mustafanalanbudak/Desktop/filetoupload.png";
 
         WebElement chooseFile = Driver.getDriver().findElement(By.id("file-upload"));
 

@@ -25,7 +25,7 @@ public class WindowHandlePractice {
         driver.get("http://practice.cybertekschool.com/windows");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+//==================================================================================
     }
 
     @Test
@@ -33,7 +33,6 @@ public class WindowHandlePractice {
         //4. Assert: Title is “Practice”
         String actualTitle = driver.getTitle();
         String expectedTitle = "Practice";
-
         Assert.assertEquals(actualTitle, expectedTitle);
 
         //5. Click to: “Click Here” text
@@ -74,12 +73,12 @@ public class WindowHandlePractice {
 
 
     }
-
+//=====================================================================================
 
     @AfterMethod
     public void teardownMethod() throws InterruptedException {
         Thread.sleep(5000);
-        driver.quit();
+     //  driver.quit();
     }
 
 }

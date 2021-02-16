@@ -19,7 +19,7 @@ public class P2_ZerobankVerification {
         driver.get("http://zero.webappsecurity.com/login.html");
 
         //3. Verify link text from top left:
-        WebElement zeroBankLink = driver.findElement(By.className("brand"));
+        WebElement zeroBankLink = driver.findElement(By.className("brand"));     // className is looking "class" attribute values.
 
 
         //Expected: “Zero Bank”

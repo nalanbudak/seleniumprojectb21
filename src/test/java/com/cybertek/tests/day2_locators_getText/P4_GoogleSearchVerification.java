@@ -28,7 +28,7 @@ public class P4_GoogleSearchVerification {
         //4- Click google search button
         // //(instead of clicking to search button we press ENTER)
 
-        driver.findElement(By.name("q")).sendKeys("apple" + Keys.ENTER);
+        driver.findElement(By.name("q")).sendKeys("apple" + Keys.ENTER); // enter basmak gibi dusun
 
         //5- Verify title:
         //Expected: Title should start with “apple” word

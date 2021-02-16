@@ -9,7 +9,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class WebTablePractices extends TestBase {
+public class WebTablePractices extends TestBase {  //setup'i  test base class'tan aldik extends keyword'u kullanarak
+
 
     @Test
     public void verify_order_test() throws InterruptedException, IOException {

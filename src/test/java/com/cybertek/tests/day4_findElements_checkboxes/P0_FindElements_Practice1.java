@@ -19,7 +19,7 @@ public class P0_FindElements_Practice1 {
         driver.get("http://practice.cybertekschool.com/forgot_password");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
+//===================
         //#2- Locate all of the LINKS on the page, and print out all the texts
         // first, we need to find the locator that is returning us all of the links in the page
         //body//a
@@ -35,13 +35,13 @@ public class P0_FindElements_Practice1 {
             System.out.println(eachLink.getText());
 
         }
-
+//===================
         //#3- Print out how many links on the page
 
         int numberOfLinks = listOfLinks.size();
 
         System.out.println("numberOfLinks = " + numberOfLinks);
 
-        driver.close();
+    //    driver.close();
     }
 }

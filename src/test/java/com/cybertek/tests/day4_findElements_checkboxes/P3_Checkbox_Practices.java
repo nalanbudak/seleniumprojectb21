@@ -10,12 +10,14 @@ import java.util.concurrent.TimeUnit;
 public class P3_Checkbox_Practices {
 
     public static void main(String[] args) throws InterruptedException {
+
         //Practice: Cybertek Checkboxes
         //1. Go to http://practice.cybertekschool.com/checkboxes
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/checkboxes");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//==============================
 
         //LOCATING CHECKBOXES
         WebElement checkbox1 = driver.findElement(By.xpath("//input[@type='checkbox'][1]"));
@@ -59,6 +61,9 @@ public class P3_Checkbox_Practices {
             System.out.println("Checkbox#2 is selected. Verification FAILED!!!");
         }
 
+
+        //======================================
+
         //CLicking to home link
 
         driver.findElement(By.linkText("Home")).click();
@@ -67,7 +72,7 @@ public class P3_Checkbox_Practices {
         Thread.sleep(2000);
         driver.navigate().back();
 
-        //re-locating the web element to refresh the driver's reference to it
+        //re-locating the web element to REFRESH the driver's reference to it
         checkbox1 = driver.findElement(By.xpath("//input[@type='checkbox'][1]"));
 
         //clicking to checkbox1

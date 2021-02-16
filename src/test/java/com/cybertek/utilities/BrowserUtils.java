@@ -1,15 +1,15 @@
 package com.cybertek.utilities;
 
 /*
-We will create utility methods for repeated steps that can be used
-in browsers, and store in this class.
+        We will create utility methods for repeated steps that can be used
+        in browsers, and store in this class.
  */
 
 public class BrowserUtils {
 
-   //create method name: wait
-   //converting milliseconds to seconds
-   //handle checked exception
+    //create method name: wait
+    //converting milliseconds to seconds
+    //handle checked exception
 
     public static void sleep(int second) {
         second *= 1000;
@@ -22,3 +22,10 @@ public class BrowserUtils {
     }
 
 }
+/*    BrowserUtils:
+
+         - This class we created to store common utility methods
+
+         - All methods in this class will be static
+
+         - So we can call by class name and use anywhere we want */

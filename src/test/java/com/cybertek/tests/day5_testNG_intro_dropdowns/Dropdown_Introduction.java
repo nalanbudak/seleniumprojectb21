@@ -17,7 +17,7 @@ public class Dropdown_Introduction {
     WebDriver driver;
 
     @BeforeClass
-    public void setupClass(){
+    public void setupClass() {
 
         //TC#1: Verifying "Simple dropdown" and "State selection" dropdown default values
         //1. Open Chrome browser
@@ -31,7 +31,7 @@ public class Dropdown_Introduction {
     }
 
     @Test
-    public void dropdown_test1(){
+    public void dropdown_test1() {
 
 
         //3. Verify "Simple dropdown" default selected value is correct
@@ -44,7 +44,7 @@ public class Dropdown_Introduction {
         //This method will return us the currently selected option as a web element
         WebElement currentlySelectedOption = select.getFirstSelectedOption();
 
-        String expectedDefaultValue= "Please select an option";
+        String expectedDefaultValue = "Please select an option";
         String actualDefaultValue = currentlySelectedOption.getText();
 
         Assert.assertEquals(actualDefaultValue, expectedDefaultValue);
@@ -54,7 +54,7 @@ public class Dropdown_Introduction {
     }
 
     @AfterClass
-    public void tearDownClass(){
+    public void tearDownClass() {
         driver.close();
     }
 

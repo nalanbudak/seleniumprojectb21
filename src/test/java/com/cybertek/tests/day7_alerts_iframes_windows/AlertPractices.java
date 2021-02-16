@@ -53,23 +53,28 @@ public class AlertPractices {
         String actualText = resultText.getText();
         String expectedText = "You successfuly clicked an alert";
 
-        Assert.assertTrue(resultText.isDisplayed());
+        Assert.assertTrue(resultText.isDisplayed());      //  assert =====>compare two values
         Assert.assertEquals(actualText, expectedText);
 
-
-
-
-
     }
-
-
 
 
     //AfterMethod will wait 5 seconds before closing the browser
     @AfterMethod
     public void teardownMethod() throws InterruptedException {
         Thread.sleep(5000);
-        driver.close();
+      //  driver.close();
     }
 
 }
+/*TC #1: Information alert practice
+
+        1. Open browser
+
+        2. Go to website: http://practice.cybertekschool.com/javascript_alerts
+
+        3. Click to “Click for JS Alert” button
+
+        4. Click to OK button from the alert
+
+        5. Verify “You successfuly clicked an alert” text is displayed.*/
